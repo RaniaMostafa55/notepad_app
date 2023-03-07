@@ -30,12 +30,15 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: 15),
-              TextFormField(
-                decoration: const InputDecoration(
-                    hintText: "Search notes",
-                    prefixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(30)))),
+              SizedBox(
+                height: 40,
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                      label: Text("Search notes"),
+                      prefixIcon: Icon(Icons.search),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30)))),
+                ),
               ),
               const SizedBox(height: 20),
               Expanded(
