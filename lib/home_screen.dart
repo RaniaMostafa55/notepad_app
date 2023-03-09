@@ -33,6 +33,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 40,
                 child: TextFormField(
+                  keyboardType: TextInputType.text,
                   decoration: const InputDecoration(
                       label: Text("Search notes"),
                       prefixIcon: Icon(Icons.search),
@@ -43,7 +44,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Expanded(
                 child: ListView.builder(
-                  itemCount: 2,
+                  itemCount: titles.length,
                   itemBuilder: (context, index) =>
                       noteCart(colors[index], titles[index], times[index]),
                 ),
